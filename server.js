@@ -7,13 +7,14 @@ const mongoose = require('mongoose');
 //const bcrypt = require('bcrypt');
 const passport = require('passport');
 const flash = require('connect-flash');
+const fs = require("fs");
 
 // server
 var app = express();
 
 // connecting to database
 var server = require('http').createServer(app);
-var db = mongoose.connect('mongodb://localhost:27017/signals');
+var db = mongoose.connect('mongodb+srv://med:<password>@cluster0-pkyk2.mongodb.net/test?retryWrites=true&w=majority');
 
 // passport
 
