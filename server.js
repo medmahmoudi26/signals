@@ -43,9 +43,10 @@ app.use(session({
 
 // routes
 indexRoutes  = require("./routes/index.js");
-user         = require("./routes/user.js");
+userRoutes   = require("./routes/user.js");
 
 app.use("/", indexRoutes);
+app.use("/user", userRoutes);
 
 // listen
 app.listen(80);

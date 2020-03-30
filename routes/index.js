@@ -30,7 +30,7 @@ router.post("/register", function(req, res) {
             password : hashedpass,
             RH       : rh
         }, function(error, success){
-            if (error) res.render("register", {error: error});
+            if (error) res.render("register", {error: error}); // change error message with email already exists
             else if (success) {
                 req.flash("success_msg", "Compte crée, vous pouvez connecter");
                 res.redirect("/login");
